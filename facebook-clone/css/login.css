@@ -122,6 +122,7 @@
     padding-bottom: 40px;
     align-content: center;
     justify-items: center;
+    min-height: 90vh;
   }
 
   .welcome-section {
