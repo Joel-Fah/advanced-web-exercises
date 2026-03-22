@@ -1,0 +1,196 @@
+
+html {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 40px;
+}
+
+/* Wrapper */
+.register-wrapper {
+  width: 100%;
+  max-width: 532px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 24px;
+}
+
+/* Top Bar */
+.reg-topbar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0 0 12px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  margin-left: -12px;
+  transition: background 0.15s;
+}
+
+.back-btn:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+.back-btn svg {
+  width: 32px;
+  height: 32px;
+}
+
+.meta-logo-reg {
+  width: 64px;
+}
+
+/* Registration Card */
+.reg-card {
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reg-title {
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+/* Form */
+.reg-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.reg-form > * {
+  width: 100%;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.field-label {
+  font-size: 14pt;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.label-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ——— Question mark icon button ——— */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  margin-top: -6px;
+  color: var(--text-secondary);
+}
+
+.icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.birthday-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: 10px;
+}
+
+/* default state */
+.form-select:invalid,
+.form-select option[value=""] {
+  color: #8A8D91 !important;
+}
+
+.select-chevron {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.field-hint, .legal-copy {
+  color: var(--text-secondary);
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Responsive Layout */
+@media (max-width: 480px) {
+  body {
+    background: #fff;
+    padding: 12px 0 32px;
+  }
+
+  .register-wrapper {
+    max-width: 100%;
+  }
+
+  .reg-topbar {
+    padding: 0 16px 12px;
+  }
+
+  .reg-card {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 16px 16px 24px;
+  }
+
+  .name-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .birthday-row {
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+    gap: 6px;
+  }
+}

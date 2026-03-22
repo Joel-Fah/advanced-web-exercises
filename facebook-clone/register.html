@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook - Create a new account</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="css/register.css" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/logos/facebook-logo.svg" type="image/x-icon">
+</head>
+
+<body>
+  <div class="register-wrapper">
+
+    <!-- Back button + Meta logo header -->
+    <div class="reg-topbar">
+      <a href="login.html" class="back-btn" aria-label="Go back">
+        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg" color="#000000">
+          <path d="M15 6L9 12L15 18" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+        </svg>
+      </a>
+      <img src="assets/logos/meta-logo.svg" alt="Meta" class="meta-logo-reg" />
+    </div>
+
+    <main class="reg-card">
+      <div class="">
+        <h1 class="reg-title">Get started on Facebook</h1>
+        <p class="reg-subtitle">
+          Create an account to connect with friends, family and communities of people who share your
+          interests.
+        </p>
+      </div>
+
+      <form class="reg-form">
+        <!-- Name -->
+        <fieldset class="field-group">
+          <legend class="field-label">Name</legend>
+          <div class="name-row">
+            <div class="form-group">
+              <input type="text" id="first_name" class="form-control" placeholder="">
+              <label for="first_name" class="form-control-placeholder">First Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="last_name" class="form-control" placeholder="">
+              <label for="last_name" class="form-control-placeholder">Last Name</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Birthday -->
+        <div class="field-group">
+          <div class="label-with-icon">
+            <span class="field-label">Birthday</span>
+            <button type="button" class="icon-btn" title="Why do we ask for birthday?" aria-label="Birthday info">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="10" cy="10" r="8.5" />
+                <path d="M10 9v5" stroke-linecap="round" />
+                <circle cx="10" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="birthday-row">
+            <div class="form-group">
+              <select id="birth-month" name="birth_month" class="form-select" aria-label="Month">
+                <option value="" disabled selected>Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+
+            <div class="form-group">
+              <select id="birth-day" name="birth_day" class="form-select" aria-label="Day">
+                <option value="" disabled selected>Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+            <div class="form-group">
+              <select id="birth-year" name="birth_year" class="form-select" aria-label="Year">
+                <option value="" disabled selected>Year</option>
+                <!-- Years generated via JS below -->
+              </select>
+              <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+          <div class="label-with-icon">
+            <span class="field-label">Gender</span>
+            <button type="button" class="icon-btn" title="Why do we ask for gender?" aria-label="Gender info">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="10" cy="10" r="8.5" />
+                <path d="M10 9v5" stroke-linecap="round" />
+                <circle cx="10" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="form-group">
+            <select id="gender" name="gender" class="form-select" aria-label="Select your gender">
+              <option value="" disabled selected>Select your gender</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="custom">Custom</option>
+            </select>
+            <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Mobile or Email -->
+        <div class="form-group">
+          <label class="field-label" for="contact">Mobile number or email</label>
+          <div class="form-group">
+            <input type="text" id="email" class="form-control" placeholder="">
+            <label for="email" class="form-control-placeholder">Email or mobile number</label>
+          </div>
+          <p class="field-hint">
+            You may receive notifications from us.
+            <a href="#" class="link-blue">Learn why we ask for your contact information</a>
+          </p>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label class="field-label" for="reg-password">Password</label>
+          <div class="form-group">
+            <input type="password" id="password" class="form-control" placeholder="">
+            <label for="password" class="form-control-placeholder">Password</label>
+          </div>
+        </div>
+
+        <!-- ===== Legal copy ===== -->
+        <p class="legal-copy">
+          People who use our service may have uploaded your contact information to Facebook.
+          <a href="#" class="link-blue">Learn more.</a>
+        </p>
+        <p class="legal-copy">
+          By tapping Submit, you agree to create an account and to Facebook's
+          <a href="#" class="link-blue">Terms</a>,
+          <a href="#" class="link-blue">Privacy Policy</a> and
+          <a href="#" class="link-blue">Cookies Policy</a>.
+        </p>
+        <p class="legal-copy">
+          The <a href="#" class="link-blue">Privacy Policy</a> describes the ways we can use the information we collect
+          when you create an account. For example, we use this information to provide, personalize and improve our
+          products, including ads.
+        </p>
+
+        <!-- Submit button -->
+        <button type="button" class="btn btn-primary" onclick="alert('Hurrayyy!!')">
+          Submit
+        </button>
+        <a href="./login.html" class="btn btn-tertiary-outline">I already have an account</a>
+      </form>
+    </main>
+  </div>
+
+  <!-- Footer -->
+    <footer class="site-footer">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#">English (US)</a>
+        <a href="#">Français (France)</a>
+        <a href="#">Fula</a>
+        <a href="#">Español (España)</a>
+        <a href="#">Deutsch</a>
+        <a href="#">Bahasa Indonesia</a>
+        <a href="#">Italiano</a>
+        <a href="#" class="more-lang">More languages…</a>
+      </nav>
+      <nav class="footer-links" aria-label="Secondary footer links">
+        <a href="#">Sign Up</a>
+        <a href="#">Log In</a>
+        <a href="#">Messenger</a>
+        <a href="#">Facebook Lite</a>
+        <a href="#">Video</a>
+        <a href="#">Meta Pay</a>
+        <a href="#">Meta Store</a>
+        <a href="#">Meta Quest</a>
+        <a href="#">Ray-Ban Meta</a>
+        <a href="#">Meta AI</a>
+        <a href="#">Instagram</a>
+        <a href="#">Threads</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+      <nav class="footer-links" aria-label="Tertiary footer links">
+        <a href="#">Privacy Center</a>
+        <a href="#">About</a>
+        <a href="#">Create ad</a>
+        <a href="#">Create Page</a>
+        <a href="#">Developers</a>
+        <a href="#">Careers</a>
+        <a href="#">Cookies</a>
+        <a href="#">Ad choices ▷</a>
+        <a href="#">Terms</a>
+        <a href="#">Help</a>
+        <a href="#">Contact Uploading &amp; Non-Users</a>
+      </nav>
+      <p class="footer-copy">Meta © 2026</p>
+    </footer>
+
+  <script>
+    // Populate year select dynamically
+    const yearSelect = document.getElementById('birth-year');
+    const currentYear = new Date().getFullYear();
+    for (let y = currentYear; y >= 1905; y--) {
+      const opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y;
+      yearSelect.appendChild(opt);
+    }
+  </script>
+</body>
+
+</html>

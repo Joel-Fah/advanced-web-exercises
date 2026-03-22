@@ -1,0 +1,235 @@
+/* Imports Font */
+@font-face {
+    font-family: GeneralSans;
+    src: url('../assets/fonts/GeneralSans/GeneralSans-Variable.ttf') format(truetype);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GeneralSans;
+    src: url('../assets/fonts/GeneralSans/GeneralSans-VariableItalic.ttf') format(truetype);
+    font-style: italic;
+}
+
+/* Variables */
+:root {
+    /* Colors */
+    --black-color: #111112;
+    --white-color: #ffffff;
+    --surface-white: #f0f2f5;
+    --fb-blue: #1877F2;
+    --fb-blue-hover: #0064E0;
+    --border-color: #DFE2E5;
+
+    /* Radius */
+    --base-radius: 8px;
+
+    /* Font: General Sans */
+    --font-family: GeneralSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+}
+
+input,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.link-blue {
+    color: var(--fb-blue-hover);
+    font-weight: 500;
+}
+
+a.link-blue:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: calc(var(--base-radius) * 4);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 200ms, color 200ms;
+}
+
+.btn-primary {
+    background-color: var(--fb-blue);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--fb-blue-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--fb-blue);
+    border: 1.5px solid var(--fb-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--surface-white);
+    border-color: var(--fb-blue);
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--black-color);
+}
+
+.btn-tertiary-outline {
+    background-color: transparent;
+    color: var(--black-color);
+    border: 1.5px solid var(--border-color);
+}
+
+.btn-tertiary:hover,
+.btn-tertiary-outline:hover {
+    background-color: var(--surface-white);
+}
+
+/* Form Input */
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-control {
+    padding: 24px 20px 10px;
+    display: block;
+    width: 100%;
+    border-radius: calc(var(--base-radius) * 2);
+    border: 1.5px solid var(--border-color);
+    font-weight: 500;
+    transition: border-color 200ms;
+}
+
+.form-control:hover {
+    border-color: var(--black-color);
+}
+
+.form-control:focus {
+    border-color: var(--fb-blue);
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    padding: 12px 0 0 13px;
+    transition: all 200ms;
+    opacity: 0.5;
+    pointer-events: none;
+    font-weight: 500;
+}
+
+.form-control:focus+.form-control-placeholder,
+.form-control:not(:placeholder-shown)+.form-control-placeholder {
+    font-size: 75%;
+    transform: translate3d(0, -40%, 0);
+}
+
+.form-control:focus+.form-control-placeholder {
+    color: var(--fb-blue);
+    opacity: 1;
+}
+
+/* Form Selects */
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 18px 20px;
+    display: block;
+    width: 100%;
+    border-radius: calc(var(--base-radius) * 2);
+    border: 1.5px solid var(--border-color);
+    font-weight: 500;
+    transition: border-color 200ms;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.form-select:hover {
+    border-color: var(--black-color);
+}
+
+.form-select:focus,
+.form-select:active {
+    border-color: var(--fb-blue);
+}
+
+.form-select-placeholder {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    padding: 12px 0 0 13px;
+    font-weight: 500;
+    pointer-events: none;
+    font-size: 75%;
+    transform: translate3d(0, -40%, 0);
+    opacity: 0.5;
+    transition: all 200ms;
+}
+
+.form-select:focus+.form-select-placeholder {
+    color: var(--fb-blue);
+    opacity: 1;
+}
+
+/* Footer */
+.site-footer {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 16px;
+    width: fit-content;
+    max-width: 100%;
+    margin: auto;
+}
+
+.site-footer > * {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 12px;
+  opacity: 0.7;
+}
