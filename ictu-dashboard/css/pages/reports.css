@@ -1,0 +1,24 @@
+/* reports.css */
+.report-layout { display: grid; grid-template-columns: 320px 1fr; gap: var(--space-6); align-items: start; }
+.report-config { position: sticky; top: calc(var(--topbar-height) + var(--space-6)); }
+.report-type-opts { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-5); }
+.report-type-opt {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border-warm);
+  border-radius: var(--radius-lg); cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 14px; color: var(--color-olive-gray);
+}
+.report-type-opt:has(input:checked) {
+  background: rgba(201,100,66,0.08);
+  border-color: var(--color-terracotta);
+  color: var(--color-near-black);
+}
+.report-type-opt input { accent-color: var(--color-terracotta); }
+.preview-stat { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--color-border-cream); font-size: 14px; }
+.preview-stat:last-child { border-bottom: none; }
+.preview-stat-label { color: var(--color-stone-gray); }
+.preview-stat-val { font-weight: 600; color: var(--color-near-black); font-family: var(--font-mono); }
+.rank-table th, .rank-table td { padding: 10px 12px; }
+@media (max-width: 900px) { .report-layout { grid-template-columns: 1fr; } .report-config { position: static; } }

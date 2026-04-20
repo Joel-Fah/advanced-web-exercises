@@ -1,0 +1,77 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-parchment);
+  color: var(--color-near-black);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-near-black);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+
+p { line-height: 1.6; color: var(--color-olive-gray); }
+
+a { color: var(--color-terracotta); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--color-coral); }
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+ul, ol { list-style: none; }
+
+img { max-width: 100%; display: block; }
+
+select, input, textarea, button { font-family: var(--font-sans); }
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-near-black);
+  margin-bottom: var(--space-2);
+}
+
+.section-subtitle {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--color-stone-gray);
+  margin-bottom: var(--space-6);
+  line-height: 1.6;
+}
+
+.page-header {
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border-cream);
+  padding-bottom: var(--space-6);
+}
+
+.text-sm { font-size: 13px; }
+.text-xs { font-size: 11px; letter-spacing: 0.3px; }
+.text-muted { color: var(--color-stone-gray); }
+.text-error { color: var(--color-error); }
+.text-success { color: var(--color-success); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border-warm); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ring-warm); }

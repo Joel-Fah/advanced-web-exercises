@@ -1,0 +1,29 @@
+/* courses.css */
+.student-info-card {
+  display: flex; align-items: center; gap: var(--space-6);
+  background: var(--color-deep-dark); color: var(--color-ivory);
+  border-radius: var(--radius-xl); padding: var(--space-6);
+  margin-bottom: var(--space-6); flex-wrap: wrap;
+}
+.student-info-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--color-terracotta);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 20px; color: #fff;
+  flex-shrink: 0;
+}
+.student-info-name { font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-ivory); }
+.student-info-id { font-family: var(--font-mono); font-size: 12px; color: var(--color-warm-silver); }
+.student-info-gpa { margin-left: auto; text-align: right; }
+.student-info-gpa-val { font-family: var(--font-serif); font-size: 2rem; color: var(--color-coral); }
+.student-info-gpa-label { font-size: 11px; color: var(--color-warm-silver); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.course-panel {
+  background: var(--color-ivory);
+  border: 1px solid var(--color-border-cream);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin-bottom: var(--space-5);
+  animation: slideDown 300ms ease;
+}
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
